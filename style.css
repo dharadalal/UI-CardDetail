@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: black;
+    --grey : grey;
+    --cream : #f5f0eb;;
+    --brown: #756c67;
+    --white: white;
+}
+body{
+    background-color: var(--brown);
+}
+
+.blog-container{  
+    height: 100%;
+    /* ahiya me margin apyu hatu etle scrollbar avtu hatu window nu */
+    padding:15px 10px;
+}
+.heading{
+    text-align: center;
+    text-transform: capitalize;
+    font-size:2rem;
+    color:var(--white);
+}
+.row-container{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    height:100%;
+    overflow-x: scroll;
+}
+.card-container{
+    max-width:300px;
+    margin-bottom: 50px;
+    background-color:var(--white);
+    border-radius: 10px;   
+    /* grow 0 shrink 0 che auto basis che etel content rite length le che if width na api
+    hoy to but me ahiya 300px length api didhi chr   */
+    flex: 0 0 100%;
+    position: relative;
+}
+.last-child{
+    margin-right: 10px;;
+}
+.image{
+ width:100%;
+ position: relative;
+ border-radius: 10px 10px 0 0 ;
+}
+
+.date-data{
+    position: absolute;
+    z-index: 1;
+    background-color: var(--white);
+    margin:5px 10px;
+    padding:5px 10px;
+}
+.date , .month , .year{
+    text-align: center;
+}
+.content   {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content > p {
+    font-size:1.2rem;
+    color:var(--black);
+    line-height: 1.1rem;
+}
+.read-button{
+    border: none;
+    color: var(--black);
+    cursor: pointer;
+    background-color: transparent;
+    margin: 10px;
+    font-size:1rem;
+    padding:5px 10px;
+   text-align: center;
+}
+.read-button:hover{
+    background-color:var(--brown);
+    color:var(--white);
+}
+
